@@ -123,8 +123,6 @@ export class BinarySearchTree {
     let _parentNode = null;
     let goLeft = false;
     let currentNode = null;
-    let _this = this;
-    console.log(this);
     return function _remove(root, key) {
       if (key > root.key) {
         //向右查找
@@ -140,7 +138,6 @@ export class BinarySearchTree {
       } else {
         //找到当前节点 currentNode
         //currentNode 包括左子树和右子树， 把当前节点对应的 右子树最小值的节点作为根节点
-        // let minNode = _this.minRoot(currentNode.right); //找到右子树最小值的节点
         let minNode = currentNode.right; //找到右子树最小值的节点
         let minNode_parent = currentNode;
         while (minNode.left) {

@@ -12,7 +12,6 @@ const binarySearchTree = new BinarySearchTree();
 export function BinarySearchTreeComponent() {
   const [value, setValue] = useState('');
 
-  useEffect(() => {}, []);
   return (
     <div className="binarySearchTree-component">
       <Image.PreviewGroup items={[binarytree1]}>
