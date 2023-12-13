@@ -12,8 +12,8 @@ export default function List({ children, containerHeight, data, itemHeight }) {
   useEffect(() => {
     console.log(scrollTop);
 
-    const startIndex = scrollTop / itemHeight;
-    const endIndex = (scrollTop + containerHeight) / itemHeight;
+    const startIndex = Math.floor(scrollTop / itemHeight);
+    const endIndex = Math.floor((scrollTop + containerHeight) / itemHeight);
 
     const top = itemHeight * startIndex;
     setTop(top);
