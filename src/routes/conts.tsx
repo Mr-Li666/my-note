@@ -1,3 +1,4 @@
+import VirtualList from '@/components/virtual-list';
 import {
   AlgorithmsComplexity,
   BidirectionalLink,
@@ -59,6 +60,10 @@ export const routes = [
       {
         path: 'complexity',
         element: <AlgorithmsComplexity />,
+      },
+      {
+        path: 'virtualList',
+        element: <VirtualList />,
       },
     ],
   },

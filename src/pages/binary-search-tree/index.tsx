@@ -24,15 +24,20 @@ export function BinarySearchTreeComponent() {
           type="primary"
           onClick={() => {
             // binarySearchTree.insert((Math.random() * 100).toFixed());
+
             binarySearchTree.insert(25);
             binarySearchTree.insert(18);
             binarySearchTree.insert(69);
             binarySearchTree.insert(5);
+
+            binarySearchTree.insert(99);
+
             binarySearchTree.insert(20);
             // binarySearchTree.insert(19);
             // binarySearchTree.insert(21);
             binarySearchTree.insert(32);
             binarySearchTree.insert(45);
+
             console.log(binarySearchTree);
           }}
         >

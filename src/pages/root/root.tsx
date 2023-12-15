@@ -47,6 +47,9 @@ const items: MenuItem[] = [
       getItem('快速排序', '/quickSort'),
     ]),
   ]),
+  getItem('组件', 'myComponents', <DatabaseOutlined />, [
+    getItem('虚拟列表', '/virtualList'),
+  ]),
 ];
 
 // submenu keys of first level
