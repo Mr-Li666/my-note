@@ -49,7 +49,9 @@ const items: MenuItem[] = [
   ]),
   getItem('组件', 'myComponents', <DatabaseOutlined />, [
     getItem('虚拟列表', '/virtualList'),
+    getItem('虚拟列表-动态高度', '/virtualList2'),
   ]),
+  getItem('JS', 'js', <DatabaseOutlined />, [getItem('promise', '/promise')]),
 ];
 
 // submenu keys of first level

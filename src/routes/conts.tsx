@@ -1,4 +1,5 @@
 import VirtualList from '@/components/virtual-list';
+import { VirtualList as VirtualList2 } from '@/components/virtual-list2';
 import {
   AlgorithmsComplexity,
   BidirectionalLink,
@@ -8,6 +9,8 @@ import {
   ErrorPage,
   Home,
   InsertSort,
+  MyPromise,
+  PromiseComponent,
   QueneComponent,
   QuickSort,
   Root,
@@ -64,6 +67,14 @@ export const routes = [
       {
         path: 'virtualList',
         element: <VirtualList />,
+      },
+      {
+        path: 'virtualList2',
+        element: <VirtualList2 />,
+      },
+      {
+        path: 'promise',
+        element: <PromiseComponent />,
       },
     ],
   },

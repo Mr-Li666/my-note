@@ -58,8 +58,8 @@ export default function List({ children, containerHeight, data, itemHeight }) {
           height: contentHeight,
         }}
       >
-        <div style={{ height: top }}></div>
-        <div>{renderItems}</div>
+        {/* <div style={{ height: top }}></div> */}
+        <div style={{ transform: `translateY(${top}px)` }}>{renderItems}</div>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ export * from './choose-sort';
 export * from './error-page';
 export * from './home/home';
 export * from './insert-sort';
+export * from './js';
 export * from './quene';
 export * from './quick-sort';
 export * from './root/root';
