@@ -16,9 +16,9 @@ const VariableSizeList = forwardRef(
 
     const genOffsets = () => {
       const a = [];
-      a[0] = getItemHeight(0);
+      a[0] = getItemHeight(0) + 10;
       for (let i = 1; i < data.length; i++) {
-        a[i] = getItemHeight(i) + a[i - 1];
+        a[i] = getItemHeight(i) + a[i - 1] + 10;
       }
       return a;
     };

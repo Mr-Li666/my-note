@@ -11,6 +11,7 @@ const VirtualListAutoH = ({
   children,
   getItemHeight,
   allHeightsList,
+  scrollFunc,
 }) => {
   const Children = children;
 
@@ -25,10 +26,12 @@ const VirtualListAutoH = ({
     for (let i = 0; i < data.length; i++) {
       let beforeHeight = 0;
       if (i > 0) {
-        beforeHeight = heights[i - 1];
+        beforeHeight = heights[i - 1] + 10;
       }
-      heights[i] = (getItemHeight(i) || 0) + beforeHeight;
+      heights[i] = (getItemHeight(i) || 0) + beforeHeight + 10;
     }
+    // console.log('heights', heights);
+
     setAllHeights(heights);
   };
 
@@ -47,7 +50,7 @@ const VirtualListAutoH = ({
     endIndex = Math.min(endIndex, data.length - 1);
 
     const items = [];
-    console.log(startIndex, endIndex, data);
+    // console.log(startIndex, endIndex, data);
 
     if (data && data.length > 0) {
       for (let i = startIndex; i <= endIndex; i++) {
@@ -74,6 +77,8 @@ const VirtualListAutoH = ({
   }, [allHeights, scrollTop]);
 
   const handleScroll = (e) => {
+    scrollFunc(e);
+
     flushSync(() => {
       setScrollTop(e.target.scrollTop);
     });
@@ -92,6 +97,7 @@ const VirtualListAutoH = ({
         style={{
           height: allHeights[allHeights.length - 1],
         }}
+        className="my-virtual-list2-container"
       >
         {renderItems}
       </div>
